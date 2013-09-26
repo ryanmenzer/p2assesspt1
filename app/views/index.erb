@@ -2,4 +2,13 @@
   <h1>User Skills and Levels</h1>
 
   <%# TODO: display the skills and proficiency levels for each user ... %>
+
+<table class="user_list">
+  <% @profs.each do |prof| %>
+    <tr>
+      <td><%= User.find(prof.user_id).name %></td>
+      <td><%= prof.find(prof.skill_id).name %></td>
+    </tr>
+    <% end %>
+</table>
 </div>
